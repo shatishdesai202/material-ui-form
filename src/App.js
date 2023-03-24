@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Header from "./Component/Header";
+import Box from "@mui/material/Box";
+import FormStepper from "./Component/FormStepper";
+import RefreshRow from "./Component/RefreshRow";
+import UIForm from "./Component/UIForm";
+import Footer from "./Component/Footer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ padding: "18px" }}>
+      <Header />
+      <Box
+        boxShadow={5}
+        borderRadius={3}
+        sx={{ mt: 1, pt: 2, pl: 1, pr: 1, pb: 6 }}
+      >
+        <FormStepper />
+        <RefreshRow />
+        <UIForm />
+      </Box>
+      <Footer />
     </div>
   );
 }
